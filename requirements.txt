@@ -11,3 +11,5 @@ seaborn
 transformers
 torch
 tweepy
+praw==7.7.1
+google-api-python-client

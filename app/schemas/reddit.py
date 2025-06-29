@@ -1,23 +1,24 @@
-from importlib import metadata
 
 
 from marshmallow import Schema , fields
 
-class TwitterRequestSchema(Schema):
-    keyword  = fields.Str( required=True , example = "Meta")
+
+
+
+class RedditRequestSchema(Schema) :
+    subreddit = fields.Str(required= True)
     count = fields.Int(missing= 5, metadata = {"description" :"The number of tweets to fetch ...default 2"})
 
-class TweetSentimentSchema(Schema) :
+class RedditSentimentSchema(Schema) :
     text = fields.Str()
     sentiment = fields.Str()
 
-
-class TwitterResponseSchema(Schema) :
-    keyword = fields.Str()
+class RedditResponseSchema(Schema) :
+    subreddit = fields.Str() 
     summary = fields.Dict(
         keys = fields.Str(),
         values = fields.Int(),
         metadata = {"description" : "Counts the number of pos ,neu, neg tweets"}
 
     )
-    tweets = fields.List(fields.Nested(TweetSentimentSchema))
+    comments = fields.List(fields.Nested(RedditSentimentSchema))

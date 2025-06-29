@@ -15,10 +15,13 @@ def create_app():
     app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
 
     api = Api(app)
-
+    from app.resources.reddit import blp as RedditBlueprint
     from app.resources.twitter import blp as TwitterBlueprint
     from app.resources.analyze import blp as SentimentBlueprint
+    from app.resources.youtube import blp as YouTubeBlueprint
+    api.register_blueprint(YouTubeBlueprint)
     api.register_blueprint(SentimentBlueprint)
     api.register_blueprint(TwitterBlueprint)
+    api.register_blueprint(RedditBlueprint)
 
     return app
