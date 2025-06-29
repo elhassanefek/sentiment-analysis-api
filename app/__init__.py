@@ -16,8 +16,9 @@ def create_app():
 
     api = Api(app)
 
-
+    from app.resources.twitter import blp as TwitterBlueprint
     from app.resources.analyze import blp as SentimentBlueprint
     api.register_blueprint(SentimentBlueprint)
+    api.register_blueprint(TwitterBlueprint)
 
     return app

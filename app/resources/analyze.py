@@ -23,7 +23,10 @@ class Sentiment(MethodView) :
 
         return {
             "text": text,
+            "predictions" : {
             "negative": result["roberta_neg"],
             "neutral": result["roberta_neu"],
             "positive": result["roberta_pos"]
+             },
+            "top_label": max(result, key=result.get).replace("roberta_", "")
         }
