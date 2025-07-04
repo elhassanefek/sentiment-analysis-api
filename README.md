@@ -35,7 +35,7 @@ Based on performance, we chose to integrate only **RoBERTa** into the production
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/sentiment-backend.git
+git clone https://github.com/elhassanefek/sentiment-backend.git
 cd sentiment-backend
 ```
 ### 2.Create a virtual environment
