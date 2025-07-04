@@ -13,6 +13,11 @@ This is the backend API for analyzing the sentiment of text, Reddit comments, Tw
 -  Summary statistics of sentiments (positive, neutral, negative)
 
 ---
+## Model Choice
+
+In the `notebooks/` folder, we compared VADER (lexicon-based) and RoBERTa (transformer-based) for sentiment analysis.
+
+Based on performance, we chose to integrate only **RoBERTa** into the production Flask API.
 
 ## Tech Stack
 
