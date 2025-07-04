@@ -32,14 +32,16 @@ This is the backend API for analyzing the sentiment of text, Reddit comments, Tw
 ```bash
 git clone https://github.com/yourusername/sentiment-backend.git
 cd sentiment-backend
-
+```
 ### 2.Create a virtual environment
+```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
+```
 ### 3. Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ### 4.Create .env file
 
 # .env
