@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ```
 ### 4.Create .env file
 
-# .env
+#### .env
 REDDIT_CLIENT_ID=your_reddit_client_id
 REDDIT_CLIENT_SECRET=your_reddit_client_secret
 REDDIT_USER_AGENT=your_reddit_app_name
